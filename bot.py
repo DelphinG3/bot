@@ -13,10 +13,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.upper().startswith('!PING'):
+    if message.content.upper().startswith('PING'):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s>  Pong!" % (userID) )
-    if message.content.upper().startswith('!SAY'):
+    if message.content.upper().startswith('SAY'):
         args = message.content.split(" ")
         #args[0] = !SAY
         #args[1] = Hey
