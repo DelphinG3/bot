@@ -1,0 +1,1 @@
+workert: python bot.py
