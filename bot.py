@@ -33,7 +33,7 @@ async def on_message(message):
     if message.content == "ку":
         await client.send_message(message.channel, "Дарова")
     if message.content == "Здарова мыши":
-        await client.send_message(message.channel, "Здарова чёрт")
+        await client.send_message(message.channel, "Здарова чёртила")
 
 
 
