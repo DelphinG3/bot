@@ -24,21 +24,24 @@ async def on_message(message):
         #args[1] = Hey There
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 
-    if  message.content.upper().startswith('БОТ СКАЖИ ЧТО НИБУДЬ'):
-        await client.send_message(message.channel, "Виталя ЛОХ")
-    if  message.content.upper().startswith('БОТ СКАЖИ ЧТО-НИБУДЬ'):
-        await client.send_message(message.channel, "Виталя ЛОХ" )    
+    if message.content.upper().startswith('БОТ СКАЖИ ЧТО НИБУДЬ'):
+       msg = 'Виталя ЛОХ {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+    if message.content.upper().startswith('БОТ СКАЖИ ЧТО-НИБУДЬ'):
+       msg = 'Виталя ЛОХ {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)  
     if message.content.upper().startswith('ПРИВЕТ'):
-        await client.send_message(message.channel, "Здоровеньки булы")
+       msg = 'Здоровеньки булы {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
     if message.content.upper().startswith('QQ'):
-        await client.send_message(message.channel, "q")
+       msg = 'q  {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
     if message.content.upper().startswith('КУ'):
-        await client.send_message(message.channel, "Дарова")
+       msg = 'Дарова {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
     if message.content.upper().startswith('ЗДАРОВА МЫШИ'):
-        await client.send_message(message.channel, "Здарова чёрт")
-    if message.content.startswith('!hello'):
-        msg = 'Hello {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)    
+       msg = 'Здарова чёрт {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)  
 
 
 
