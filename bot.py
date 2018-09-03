@@ -36,6 +36,9 @@ async def on_message(message):
         await client.send_message(message.channel, "Дарова")
     if message.content.upper().startswith('ЗДАРОВА МЫШИ'):
         await client.send_message(message.channel, "Здарова чёрт")
+    if message.content.startswith('!hello'):
+        msg = 'Hello {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)    
 
 
 
