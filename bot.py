@@ -15,6 +15,11 @@ client = commands.Bot(command_prefix = "!")
 @client.event
 async def on_ready():
     print("Bot is ready and connected to Discord")
+    
+@client.event
+async def on_ready():
+    await client.change_presence(game=Game(name="with humans"))
+    print("Logged in as " + client.user.name)    
 
 @client.event
 async def on_message(message):
