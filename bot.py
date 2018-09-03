@@ -26,6 +26,8 @@ async def on_message(message):
 
     if  message.content.upper().startswith('БОТ СКАЖИ ЧТО НИБУДЬ'):
         await client.send_message(message.channel, "Виталя ЛОХ")
+    if  message.content.upper().startswith('БОТ СКАЖИ ЧТО-НИБУДЬ'):
+        await client.send_message(message.channel, "Виталя ЛОХ" )    
     if message.content.upper().startswith('ПРИВЕТ'):
         await client.send_message(message.channel, "Здоровеньки булы")
     if message.content.upper().startswith('QQ'):
