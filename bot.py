@@ -41,15 +41,7 @@ async def on_message(message):
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-        
-@client.event
-async def bitcoin():
-    url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
-    async with aiohttp.ClientSession() as session:  # Async HTTP request
-    raw_response = await session.get(url)
-        response = await raw_response.text()
-        response = json.loads(response)
-    await client.say("Цена биткоина: $" + response['bpi']['USD']['rate'])    
+            
 
 
 
