@@ -49,7 +49,13 @@ async def on_message(message):
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-        
+     
+@bot.event 
+async def on_message(message):
+    if message.content.upper().startswith("SAY"):
+        args = message.content.split(" ")
+        await bot.send_message(message.channel, "%s" % (" ".join(args[1:])))
+        await bot.delete_message(message)  
             
 
 
