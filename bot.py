@@ -28,7 +28,7 @@ async def on_message(message):
         await client.send_message(message.channel, "<@%s>  Pong!" % (userID) )
     if message.content.upper().startswith('SAY'):
         args = message.content.split(" ")
-        #args[0] = !SAY
+        #args[0] = SAY
         #args[1] = Hey
         #args[2] = There
         #args[1] = Hey There
@@ -54,6 +54,7 @@ async def on_message(message):
 async def on_message(message):
     if message.content.upper().startswith("SAY"):
         args = message.content.split(" ")
+        #args[0] = SAY
         await bot.send_message(message.channel, "%s" % (" ".join(args[1:])))
         await bot.delete_message(message)  
             
