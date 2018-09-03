@@ -50,7 +50,7 @@ async def on_message(message):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
      
-@client.event 
+    
 async def on_message(message):
     if message.content.upper().startswith("SAY"):
         args = message.content.split(" ")
