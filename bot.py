@@ -52,11 +52,10 @@ async def on_message(message):
      
     
 async def on_message(message):
-    if message.content.upper().startswith("SAY"):
-        args = message.content.split(" ")
-        #args[0] = SAY
-        await bot.send_message(message.channel, "%s" % (" ".join(args[1:])))
-        await bot.delete_message(message)  
+    args = message.content.split(" ")[1:]
+    if message.content.upper().startswith(prefix + 'SAY'):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, " ".join(args))
             
 
 
