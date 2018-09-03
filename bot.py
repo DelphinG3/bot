@@ -18,7 +18,7 @@ async def on_ready():
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name="with humans"))
+    await client.change_presence(game=Game(name="очке Антона"))
     print("Logged in as " + client.user.name)    
 
 @client.event
