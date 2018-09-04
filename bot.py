@@ -35,6 +35,7 @@ async def on_message(message):
         #args[2] = There
         #args[1] = Hey There
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+        await client.delete_message(message)
 
     if  message.content.upper().startswith('БОТ СКАЖИ ЧТО НИБУДЬ'):
         await client.send_message(message.channel, "Виталя ЛОХ")
@@ -53,11 +54,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
      
     
-async def on_message(message):
-    args = message.content.split(" ")[1:]
-    if message.content.upper().startswith(prefix + 'SAY'):
-        await bot.delete_message(message)
-        await bot.send_message(message.channel, " ".join(args))
+    
         
             
 
