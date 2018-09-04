@@ -12,20 +12,7 @@ BOT_PREFIX = ("!")
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
-@client.command(name='Шар',
-                description="Answers a yes/no question.",
-                brief="Answers from the beyond.",
-                aliases=['Шар-предсказаний', 'Шарпредсказаний', '8-шар'],
-                pass_context=True)
-async def eight_ball(context):
-    possible_responses = [
-        'That is a resounding no',
-        'It is not looking likely',
-        'Too hard to tell',
-        'It is quite possible',
-        'Definitely',
-    ]
-    await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
+
 
 @client.event
 async def on_ready():
