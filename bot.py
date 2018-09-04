@@ -6,9 +6,8 @@ import random
 import aiohttp
 import time
 import json
-import requests
 from discord import Game
-
+BOT_PREFIX = ("!")
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
