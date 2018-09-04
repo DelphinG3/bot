@@ -14,7 +14,7 @@ TOKEN = "NDg1NTAzMzQ5NTE3NzEzNDE4.DnAX2A.yTZDg_4mhX31DAJthk_Mt0YHCu4"
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
-@client.command(pass_context=True)
+@client.event
 async def bitcoin(ctx):
     url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
     response = requests.get(url)
