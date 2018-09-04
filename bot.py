@@ -8,8 +8,7 @@ import time
 import json
 import requests
 from discord import Game
-BOT_PREFIX = ("?", "!")
-TOKEN = "NDg1NTAzMzQ5NTE3NzEzNDE4.DnAX2A.yTZDg_4mhX31DAJthk_Mt0YHCu4"
+
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
