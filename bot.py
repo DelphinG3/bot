@@ -6,12 +6,20 @@ import random
 import aiohttp
 import time
 import json
+import requests
 from discord import Game
-BOT_PREFIX = ("!")
+BOT_PREFIX = ("?", "!")
+TOKEN = "NDg1NTAzMzQ5NTE3NzEzNDE4.DnAX2A.yTZDg_4mhX31DAJthk_Mt0YHCu4"
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
+@client.command(pass_context=True)
+async def bitcoin(ctx):
+    url = 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
+    response = requests.get(url)
+    value = response.json()['bpi']['USD']['rate']
+    await client.send_message(ctx.message.channel, "Bitcoin price is: $" + value)
 
 
 @client.event
