@@ -9,6 +9,9 @@ import json
 from discord import Game
 BOT_PREFIX = ("!")
 
+Client = discord.Client()
+client = commands.Bot(command_prefix = "!")
+
 
 
 
