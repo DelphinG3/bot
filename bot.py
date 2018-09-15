@@ -11,29 +11,8 @@ BOT_PREFIX = ("!")
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
-bot = commands.Bot(command_prefix='?', '!')
-client = Bot(command_prefix=BOT_PREFIX)
 
-@client.command(name='Шар',
-                description="Answers a yes/no question.",
-                brief="Answers from the beyond.",
-                aliases=['Шарик', '8Шарик', '8Шар', 'шар', '8шарик', '8шар', 'ШАРИК', '8ШАРИК', '8ШАР', 'ШАР'],
-                pass_context=True)
-async def eight_ball(context):
-    possible_responses = [
-        'Определённо нет',
-        'Вероятно, нет',
-        'Сложно сказать',
-        'Возможно',
-        'Определённо да',
-    ]
-    await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
-    
 
-@client.command()
-async def square(number):
-    squared_value = int(number) * int(number)
-    await client.say(str(number) + " squared is " + str(squared_value))
 
 
 
