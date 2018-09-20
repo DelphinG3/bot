@@ -42,15 +42,15 @@ async def on_message(message):
 
     if  message.content.upper().startswith('БОТ СКАЖИ ЧТО НИБУДЬ'):
         await client.send_message(message.channel, "Виталя ЛОХ")
-    else  message.content.upper().startswith('БОТ СКАЖИ ЧТО-НИБУДЬ'):
+    if  message.content.upper().startswith('БОТ СКАЖИ ЧТО-НИБУДЬ'):
         await client.send_message(message.channel, "Виталя ЛОХ" )    
-    else message.content.upper().startswith('ПРИВЕТ'):
+    if message.content.upper().startswith('ПРИВЕТ'):
         await client.send_message(message.channel, "Здоровеньки булы")
-    else message.content.upper().startswith('QQ'):
+    if message.content.upper().startswith('QQ'):
         await client.send_message(message.channel, "q")
-    else message.content.upper().startswith('КУ'):
+    if message.content.upper().startswith('КУ'):
         await client.send_message(message.channel, "Дарова")
-    else message.content.upper().startswith('ЗДАРОВА МЫШИ'):
+    if message.content.upper().startswith('ЗДАРОВА МЫШИ'):
         await client.send_message(message.channel, "Здарова чёрт")
     
      
